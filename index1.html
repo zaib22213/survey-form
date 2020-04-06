@@ -7,7 +7,7 @@
     <title>Survey form</title>
     <style>
         body {
-            background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
             /* background-color: rgb(93, 125, 241); */
             background-attachment: fixed;
         }
@@ -19,41 +19,43 @@
             margin: 50px 300px 0px 300px;
         }
 
-        label {
-            font-size: 19px;
-            color: white;
-            display: block;
-            align-items: left;
-            margin-bottom: 0.5rem;
-        }
-
-        input {
-            border: white;
-            border-radius: 5px;
-            padding: 8px 200px 10px 150px;
-            margin: 8px;
-        }
-
-        select {
-            border: white;
-            border-radius: 5px;
-            padding: 10px 200px 10px 150px;
-            margin: 8px;
-        }
-#f{
-    padding-bottom: 100px;
-    margin-right:  10px;
-}
         #button {
             background-color: green;
-            text-align: center;
-            padding: 10px 200px 10px 150px;
             font-size: 17px;
             color: white;
-
+            border-style: none;
+            width: 100%;
+            height: 35px;
+            margin: 15px 0px 0px 0px;
         }
-        form{
-            margin: 0px -25px 0px -40px;
+
+        form {
+            color: white;
+        }
+
+        #name {
+            width: 100%;
+            padding: 5px;
+        }
+
+        #email {
+            width: 100%;
+            padding: 5px;
+        }
+
+        #age {
+            width: 100%;
+            padding: 5px;
+        }
+
+        #role {
+            width: 100%;
+            padding: 5px;
+        }
+
+        #zaib {
+            width: 100%;
+            padding: 5px;
         }
     </style>
 </head>
@@ -65,50 +67,45 @@
     </div>
     <div id="info">
         <form>
-            <label for="name">
-                Name<br><input id="name" type="text" placeholder="Enter Your name">
-            </label><br>
-            <label for="email">Email<br><input id="email" type="email" placeholder="Enter Your Email"></label><br>
-            <label for="age">Age(optional)<br><input id="age" type="number" placeholder="Age"></label><br>
-            <label for="role">Which option best describes your current role?<br>
-                <select id="role">
-                    <option disabled selected value>Select curent role</option>
-                    <option value="Student">Student</option>
-                    <option value="Full Time Job">Full Time Job</option>
-                    <option value="Full Time Learner">Full Time Learner</option>
-                    <option value="prefer not to say">prefer not to say</option>
-                    <option value="other">other</option>
-                </select>
-            </label><br><br>
-            <label for="za">Would you recommend freeCodeCamp to a friend?<br>
-                <label><input id="za" type="radio" value="Definitly">Definitly</label>
-                <label><input id="za" type="radio" value="Maybe">Maybe</label>
-                <label><input id="za" type="radio" value="Notsure">Notsure</label>
-            </label>
-            <label for="bg">What is your favorite feature of freeCodeCamp?<br>
-                <select>
-                    <option disabled selected value>select an option</option>
-                    <option value="challenges">challenges</option>
-                    <option value="projects">projects</option>
-                    <option value="community">community</option>
-                    <option value="open source">open source</option>
-                </select>
-            </label>
-            <label for="ty">What would you like to see improved? (Check all that apply)<br>
-                <label><input id="ty" type="checkbox" value="Front-end Projects">Front-end Projects</label>
-                <label><input id="ty" type="checkbox" value="Back-end Projects">Back-end Projects</label>
-                <label><input id="ty" type="checkbox" value="Data Visualization">Data Visualization</label>
-                <label><input id="ty" type="checkbox" value="Challenges">Challenges</label>
-                <label><input id="ty" type="checkbox" value="Open Source Community">Open Source Community</label>
-                <label><input id="ty" type="checkbox" value="Gitter help rooms">Gitter help rooms</label>
-                <label><input id="ty" type="checkbox" value="Videos">Videos</label>
-                <label><input id="ty" type="checkbox" value="City Meetups">City Meetups</label>
-                <label><input id="ty" type="checkbox" value="Wiki">Wiki</label>
-                <label><input id="ty" type="checkbox" value="Forum">Forum</label>
-                <label><input id="ty" type="checkbox" value="Additional Courses">Additional Courses</label>
-            </label>
-            <label for="f">Any comments or suggestions?<br><input id="f" type="text"
-                    placeholder="Enter Your comment here..."> </label><br><br>
+            <p>
+                Name</p><input id="name" type="text" placeholder="Enter Your name">
+            <p>Email</p><input id="email" type="email" placeholder="Enter Your Email">
+            <p>Age(optional)</p><input id="age" type="number" placeholder="Age" min="10" max="100">
+            <p>Which option best describes your current role?</p>
+            <select id="role">
+                <option disabled selected value>Select curent role</option>
+                <option value="Student">Student</option>
+                <option value="Full Time Job">Full Time Job</option>
+                <option value="Full Time Learner">Full Time Learner</option>
+                <option value="prefer not to say">prefer not to say</option>
+                <option value="other">other</option>
+            </select>
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label> <input id="za" type="radio" value="Definitly"> Definitly</label><br>
+            <label> <input id="za" type="radio" value="Maybe"> Maybe</label><br>
+            <label> <input id="za" type="radio" value="Notsure"> Notsure</label><br>
+            <p>What is your favorite feature of freeCodeCamp?</p>
+            <select id="zaib">
+                <option disabled selected value>select an option</option>
+                <option value="challenges">challenges</option>
+                <option value="projects">projects</option>
+                <option value="community">community</option>
+                <option value="open source">open source</option>
+            </select>
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label> <input id="ty" type="checkbox" value="Front-end Projects"> Front-end Projects</label><br>
+            <label> <input id="ty" type="checkbox" value="Back-end Projects"> Back-end Projects</label><br>
+            <label> <input id="ty" type="checkbox" value="Data Visualization"> Data Visualization</label><br>
+            <label> <input id="ty" type="checkbox" value="Challenges"> Challenges</label><br>
+            <label> <input id="ty" type="checkbox" value="Open Source Community"> Open Source Community</label><br>
+            <label> <input id="ty" type="checkbox" value="Gitter help rooms"> Gitter help rooms</label><br>
+            <label> <input id="ty" type="checkbox" value="Videos"> Videos</label><br>
+            <label> <input id="ty" type="checkbox" value="City Meetups"> City Meetups</label><br>
+            <label> <input id="ty" type="checkbox" value="Wiki"> Wiki</label><br>
+            <label> <input id="ty" type="checkbox" value="Forum"> Forum</label><br>
+            <label> <input id="ty" type="checkbox" value="Additional Courses"> Additional Courses</label><br><br>
+            <textarea name="comment" id="textarea" cols="60" rows="8"
+                placeholder="Enter your comment here....."></textarea>
             <button value="Submit" id="button">Submit</button>
         </form>
     </div>
